@@ -22,11 +22,19 @@ public class 대소문자_변환 {
     public String solution(String str){
         char[] chars = str.toCharArray();
         String solution = "";
+        //  for (char c : chars) {
+        //      if(65 <= c && c <= 90){
+        //          solution += Character.toLowerCase(c);
+        //      }else if(97 <= c && c <= 122){
+        //          solution += Character.toUpperCase(c);
+        //      }
+        //  }
+
         for (char c : chars) {
             int i = (int) c;
-            if(65 <= i && i <= 90){
+            if(Character.isUpperCase(c)){
                 solution += Character.toLowerCase(c);
-            }else if(97 <= i && i <= 122){
+            }else if(Character.isLowerCase(c)){
                 solution += Character.toUpperCase(c);
             }
         }
